@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //７−１
+        const animal = {
+            cat: {name:'ペルシャ', age:'3歳'},
+            dog: {name:'プードル', age:'2歳'}
+        }
+
+        //７−２
+        const user = [
+            { name:'山田太郎', age:30 },
+            { name: '田中俊', age:28 },
+            { name: '木村涼子',　age:23 }
+          ]
+
+        //７−３
+        const hero = {
+            hp:100,
+            exp:80,
+            sword:12,
+            magic:20,
+
+            attack_sword: function() {
+                return this.sword * ( this.exp / 100);
+            },
+            attack_magic: function() {
+                return this.magic * (this.exp / 100);
+            }
+        }
+
+        // 7.2
+        const user_name = prompt('名前を入力してください');
+        const user_tell = prompt('電話番号を入力してください');
+        const user = {}
+        user.name = user_name;
+        user.tell = user_tell;
+        console.log(user);
+    </script>
+</body>
+</html>
