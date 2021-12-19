@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    img {
+      width: 10px;
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <button>表示</button>
+  <div>
+    <img src="images/sample.jpg" />
+  </div>
+
+  <script src="jquery-3.6.0.min.js"></script>
+  <script>
+    $('button').on('click', () => {
+      $('img').animate({
+        opacity: 1,
+        width: 400,
+      }, 1000);
+    })
+  </script>
+</body>
+
+</html>

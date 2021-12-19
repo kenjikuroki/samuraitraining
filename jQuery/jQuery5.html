@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>サンプル</title>
+    <style>
+      #wrap {
+        width: 400px;
+        text-align: center;
+      }
+      #text {
+        width: 400px;
+        height: 180px;
+        margin: auto;
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 2em;
+        color: #fff;
+        background-color: #666;
+        user-select: none;
+      }
+    </style>
+</head>
+<body>
+  <div id="wrap">
+    <h1>10</h1>
+    <div id="text">ここをクリックする！</div>
+  </div>
+  
+  <script src="jquery.min.js"></script>
+  <script>
+    let time = 10;
+    let score = 0;
+
+    const id = setInterval(() => {
+            
+      if(time < 0) {
+        // タイマーが0になったときの処理を記述する
+        clearInterval(id);
+        alert('結果は' + score + '回でした！');
+        time = 10;
+      }
+      
+      // カウントダウンを表示する処理を記述する
+      $('h1').text(time--);
+      
+    },1000);
+    
+    // クリックしたときにスコアを1ずつ加算する処理を記述する
+    $('#text').on('click', () => score++ );
+  </script>
+</body>
+</html> 
