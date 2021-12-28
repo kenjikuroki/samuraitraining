@@ -47,19 +47,20 @@
             </div>
         </nav>
     </header>
-     <!--title-->
-     <div class="front_contents container bg-light mb-5">
+    <!--title-->
+    <div class="front_contents container bg-light mb-5">
         <img class="bg-image" src="img/tropical-beach.jpeg" alt="">
         <h1>PORTFOLIO</h1>
     </div>
 
-    <div class="container bg-white py-5 mt-2 mb-5">  
+    <div class="container bg-white py-5 mt-2 mb-5">
         <!--profile-->
+
+        <div id="Profile" class="subTitle">
+            <h4 class="p-3 mb-3 bg-white"></h4>
+            <h2 class="text-center py-3 mb-md-4 display-1 title">Profile</h2>
+        </div>
         <div class="containers">
-            <div id="Profile" class="subTitle">
-                <h4 class="p-3 mb-3 bg-white"></h4>
-                <h2 class="text-center py-3 mb-md-4 display-1 title">Profile</h2>
-            </div>
             <div class="row">
                 <div class="col-md-4 col-12">
                     <div class="mx-5">
@@ -82,11 +83,12 @@
         </div>
 
         <!--Skills-->
+
+        <div id="Skills" class="subTitle">
+            <h4 class="p-1 mb-1 bg-white "></h4>
+            <h2 class="text-center mt-lg-5 mb-md-3 display-1 py-3 title">Skills</h2>
+        </div>
         <div class="containers">
-            <div id="Skills" class="subTitle">
-                <h4 class="p-1 mb-1 bg-white "></h4>
-                <h2 class="text-center mt-lg-5 mb-md-3 display-1 py-3 title">Skills</h2>
-            </div>
             <div class="row justify-content-center">
                 <div class="card mb-4 mx-3 shadow" style="width: 18rem;">
                     <img src="img/html.png" class="card-img-top img-thumbnail mt-2" alt="...">
@@ -152,32 +154,34 @@
         </div>
 
         <!--Works-->
+
+        <div id="Works" class="subTitle">
+            <h4 class="p-1 mb-1 bg-white"></h4>
+            <h2 class="text-center mt-lg-5 mb-md-3 display-1 py-3 title">Work</h2>
+        </div>
         <div class="containers">
-            <div id="Works" class="subTitle">
-                <h4 class="p-1 mb-1 bg-white"></h4>
-                <h2 class="text-center mt-lg-5 mb-md-3 display-1 py-3 title">Work</h2>
-            </div>
-            <div>
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div class="col-md-12 col-12 p-0 align-self-center">
-                        <img class="img-fluid img-thumbnail shadow" src="img/g.jpeg">
-                        <p class="py-3 mx-3">
-                            日々の営業職でもっと使いやすいTODOリストのアプリケーションがあればと思い作成しました。
-                            ルート営業職は反復行為が多いため、そういったニーズに合うように工夫しています。
-                        </p>
-                    </div>
+
+            <div class="d-flex flex-wrap justify-content-center">
+                <div class="col-md-12 col-12 p-0 align-self-center">
+                    <img class="img-fluid img-thumbnail shadow" src="img/g.jpeg">
+                    <p class="py-3 mx-3">
+                        日々の営業職でもっと使いやすいTODOリストのアプリケーションがあればと思い作成しました。
+                        ルート営業職は反復行為が多いため、そういったニーズに合うように工夫しています。
+                    </p>
                 </div>
             </div>
+
         </div>
     </div>
 
     <!--Contacts-->
     <footer class="bg-white" class="subTitle">
+
+        <div id="Contacts">
+            <h4 class="p-1 mb-1 bg-white"></h4>
+            <h2 class="text-center mt-lg-5 mb-md-4 display-1 py-3 title fadeIn_left inview">Contact</h2>
+        </div>
         <div class="containers">
-            <div id="Contacts">
-                <h4 class="p-1 mb-1 bg-white"></h4>
-                <h2 class="text-center mt-lg-5 mb-md-4 display-1 py-3 title fadeIn_left inview">Contact</h2>
-            </div>
             <div class="row mb-5">
                 <div class="col-md-4 col-12">
 
@@ -244,6 +248,18 @@
                     var scroll = $(window).scrollTop();
                     var windowHeight = $(window).height();
                     if (scroll > position - windowHeight + 200) {
+                        $(this).addClass('active');
+                    }
+                });
+            });
+        });
+        $(function () {
+            $(window).scroll(function () {
+                $('.subTitle').each(function () {
+                    var position = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > position - windowHeight + 400) {
                         $(this).addClass('active');
                     }
                 });
